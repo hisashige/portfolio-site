@@ -15,9 +15,11 @@ export default async function Page() {
     <>
       <section className={styles.top}>
         <div>
-          <h1 className={styles.title}>テクノロジーの力で世界を変える</h1>
+          <h1 className={styles.title}>Hisashige Takahashi</h1>
           <p className={styles.description}>
-            私たちは市場をリードしているグローバルテックカンパニーです。
+            I'm a Full Cycle Software Engineer.
+            <br />
+            And your partner.
           </p>
         </div>
         <Image
@@ -39,14 +41,28 @@ export default async function Page() {
       <section className={styles.section}>
         <div className={styles.horizontal}>
           <div>
-            <h2 className={styles.sectionTitleEn}>Business</h2>
-            <p className={styles.sectionTitleJa}>事業内容</p>
-            <p className={styles.sectionDescription}>
-              当社は、次世代テクノロジーの研究開発・製造・販売を行う革新的な企業です。
-              <br />
-              AI、ロボット工学、自律システムなど、幅広い分野でのソリューション提供を通じて、社会の進化と未来の創造に貢献します。
-            </p>
-            <ButtonLink href="/business">もっとみる</ButtonLink>
+            <h2 className={styles.sectionTitleEn}>Philosophy</h2>
+            <p className={styles.sectionTitleJa}>価値観</p>
+            <p className={styles.sectionSlogan}>「デジタルで人に寄り添う」</p>
+            <div className={styles.sectionDescription}>
+              <p className={styles.sentence}>
+                昨今のシステム開発は変化が目まぐるしく、数多のサービスが生まれては消え、数多の開発技術がもてはやされては廃れていきます。
+              </p>
+              <p className={styles.sentence}>
+                そんな中、
+                <b>「お客様やサービスが本当に必要としている価値は何なのかを共に考えること」</b>
+                、また<b>「特定領域や工程に囚われずに広い視野を持って開発を行っていくこと」</b>
+                がエンジニアとして大切だと考えています。
+              </p>
+              <p className={styles.sentence}>
+                友人のように気軽に心地よく相談でき、一緒に何かを作っていくことが楽しくなるような、
+                誰かの頼れるパートナーでありたい。 そんな思いで、日々の業務に取り組んでいます。
+              </p>
+              <p className={styles.sentence}>
+                <br />
+                堅苦しく書いてしまいましたが、<b>「みんなで楽しく良いものを作りたい！」</b>人です。
+              </p>
+            </div>
           </div>
           <Image
             className={styles.businessImg}
@@ -68,35 +84,40 @@ export default async function Page() {
               height={4000}
             />
             <div>
-              <h2 className={styles.sectionTitleEn}>About Us</h2>
-              <p className={styles.sectionTitleJa}>私たちについて</p>
-              <p className={styles.sectionDescription}>
-                「テクノロジーの力で世界を変える」をミッションに掲げ、日々活動をしています。
-              </p>
-              <dl className={styles.info}>
-                <dt className={styles.infoTitle}>社名</dt>
-                <dd className={styles.infoDescription}>株式会社Simple</dd>
-              </dl>
-              <dl className={styles.info}>
-                <dt className={styles.infoTitle}>設立</dt>
-                <dd className={styles.infoDescription}>2023年4月</dd>
-              </dl>
-              <dl className={styles.info}>
-                <dt className={styles.infoTitle}>所在地</dt>
-                <dd className={styles.infoDescription}>
-                  〒000-0000
-                  <br />
-                  東京都渋谷区渋谷1-1-1
-                </dd>
-              </dl>
-              <dl className={styles.info}>
-                <dt className={styles.infoTitle}>代表者</dt>
-                <dd className={styles.infoDescription}>鈴木 太郎</dd>
-              </dl>
-              <dl className={styles.info}>
-                <dt className={styles.infoTitle}>資本金</dt>
-                <dd className={styles.infoDescription}>1,000万円</dd>
-              </dl>
+              <h2 className={styles.sectionTitleEn}>Career</h2>
+              <p className={styles.sectionTitleJa}>経歴</p>
+              <div className={styles.sectionCareer}>
+                <dl className={styles.career}>
+                  <dt className={styles.careerDay}>2015年3月</dt>
+                  <dd className={styles.careerDescription}>神戸大学法学部法律学科卒業</dd>
+                </dl>
+                <dl className={styles.career}>
+                  <dt className={styles.careerDay}>2015年4月</dt>
+                  <dd className={styles.careerDescription}>独立系SIerにSEとして入社</dd>
+                </dl>
+                <dl className={styles.career}>
+                  <dt className={styles.careerDay}>2018年1月</dt>
+                  <dd className={styles.careerDescription}>株式会社神戸デジタル・ラボ入社</dd>
+                </dl>
+                <dl className={styles.career}>
+                  <dt className={styles.careerDay}>2022年12月</dt>
+                  <dd className={styles.careerDescription}>フリーランスエンジニアとして活動</dd>
+                </dl>
+              </div>
+              <div className={styles.sectionDescription}>
+                <p className={styles.sentence}>
+                  業務システムの設計・開発でキャリアをスタートし、もう少し開発全体を見通せる仕事や、新しい技術を扱いたいという思いから、Webエンジニアに転身しました。
+                </p>
+                <p className={styles.sentence}>
+                  その後プロジェクトマネージャーとして、開発チームのマネジメントや、お客様との折衝を行うなど、マネジメント業務を行いつつ、手を動かしての開発業務も続けていました。
+                </p>
+                <p className={styles.sentence}>
+                  新しい技術の利用と新規顧客の開拓を目的に新規に立ち上げたチームでは、採用や教育なども行い、エンジニアリングマネージャーとして、10名ほどのチームを運営する経験も積みました。
+                </p>
+                <p className={styles.sentence}>
+                  現在はフリーランスエンジニアとして、スタートアップ企業のアプリ開発の運用・改善チームのリードや、CTO室で共通基盤開発の支援を行っています。
+                </p>
+              </div>
             </div>
           </div>
         </section>
