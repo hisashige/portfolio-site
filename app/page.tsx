@@ -4,6 +4,9 @@ import { TOP_NEWS_LIMIT } from '@/app/_constants';
 import NewsList from '@/app/_components/NewsList';
 import styles from './page.module.css';
 import ButtonLink from '@/app/_components/ButtonLink';
+import SkillList from './_components/SkillList';
+import { skills } from './_constants/skills';
+import SkillTextList from './_components/SkillTextList';
 
 export const revalidate = 60;
 
@@ -31,13 +34,6 @@ export default async function Page() {
           priority
         />
       </section>
-      <section className={styles.news}>
-        <h2 className={styles.newsTitle}>News</h2>
-        <NewsList articles={data.contents} />
-        <div className={styles.newsLink}>
-          <ButtonLink href="/news">もっとみる</ButtonLink>
-        </div>
-      </section>
       <section className={styles.section}>
         <div className={styles.horizontal}>
           <div>
@@ -56,7 +52,7 @@ export default async function Page() {
               </p>
               <p className={styles.sentence}>
                 友人のように気軽に心地よく相談でき、一緒に何かを作っていくことが楽しくなるような、
-                誰かの頼れるパートナーでありたい。 そんな思いで、日々の業務に取り組んでいます。
+                頼れるパートナーでありたい。 そんな思いで、日々の業務に取り組んでいます。
               </p>
               <p className={styles.sentence}>
                 <br />
@@ -109,19 +105,49 @@ export default async function Page() {
                   業務システムの設計・開発でキャリアをスタートし、もう少し開発全体を見通せる仕事や、新しい技術を扱いたいという思いから、Webエンジニアに転身しました。
                 </p>
                 <p className={styles.sentence}>
-                  その後プロジェクトマネージャーとして、開発チームのマネジメントや、お客様との折衝を行うなど、マネジメント業務を行いつつ、手を動かしての開発業務も続けていました。
+                  その後プロジェクトマネージャーとして、開発チームの管理や、お客様との折衝を行うなど、マネジメント業務を主にしつつ、自ら手を動かす開発も続けていました。
                 </p>
                 <p className={styles.sentence}>
-                  新しい技術の利用と新規顧客の開拓を目的に新規に立ち上げたチームでは、採用や教育なども行い、エンジニアリングマネージャーとして、10名ほどのチームを運営する経験も積みました。
+                  新しい技術の利用と新規顧客の開拓を目的に、新規に立ち上げたチームでは、採用や教育なども行い、エンジニアリングマネージャーとして10名ほどのチームを運営する経験も積みました。
                 </p>
                 <p className={styles.sentence}>
-                  現在はフリーランスエンジニアとして、スタートアップ企業のアプリ開発の運用・改善チームのリードや、CTO室で共通基盤開発の支援を行っています。
+                  現在はフリーランスエンジニアとして、スタートアップ企業のアプリ開発の運用・改善チームのリードや、CTO室で技術基盤開発の支援を行っています。
                 </p>
               </div>
             </div>
           </div>
         </section>
       </div>
+      <section className={styles.section}>
+        <div className={styles.horizontal}>
+          <div style={{ textAlign: 'center' }}>
+            <h2 className={styles.sectionTitleEn}>Skills</h2>
+            <p className={styles.sectionTitleJa} style={{ justifyContent: 'center' }}>
+              技術スキル
+            </p>
+            <div className={styles.skills}>
+              <h2 className={styles.skillsTitle}>Frontend</h2>
+              <SkillList skills={skills.frontend} />
+              <h2 className={styles.skillsTitle}>Backend</h2>
+              <SkillList skills={skills.backend} />
+              <h2 className={styles.skillsTitle}>Infra</h2>
+              <SkillList skills={skills.infra} />
+              <h2 className={styles.skillsTitle}>Management</h2>
+              <SkillTextList skillTexts={skills.management} />
+            </div>
+            <div>
+              <h2 className={styles.skillsTitle}>強み</h2>
+              <p className={styles.sentence}>
+                要件定義〜設計〜開発〜運用、インフラ〜フロントまでフルサイクルでご相談できるのが強みです。
+              </p>
+            </div>
+            <div>
+              <h2 className={styles.skillsTitle}>業務</h2>
+              <p className={styles.sentence}>Webアプリ、スマホアプリ、LINEアプリ、技術コンサル</p>
+            </div>
+          </div>
+        </div>
+      </section>
       <section className={styles.section}>
         <div className={styles.horizontal}>
           <div>

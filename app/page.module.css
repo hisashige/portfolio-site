@@ -34,20 +34,20 @@
   z-index: -1;
 }
 
-.news {
+.skills {
   position: relative;
   background-color: #fff;
   width: 840px;
-  margin: -40px auto 0;
+  margin: -20px auto 20px;
   padding: 24px 40px;
   border-radius: var(--border-radius);
 }
 
-.newsTitle {
+.skillsTitle {
   font-size: 1.5rem;
 }
 
-.newsLink {
+.skillsLink {
   position: absolute;
   right: -40px;
   bottom: -40px;
@@ -152,7 +152,7 @@
 }
 
 @media (max-width: 1000px) {
-  .news {
+  .skills {
     width: calc(100% - 160px);
   }
 
@@ -189,12 +189,12 @@
     z-index: -1;
   }
 
-  .news {
+  .skills {
     width: calc(100% - 32px);
     padding: 16px 24px;
   }
 
-  .newsLink {
+  .skillsLink {
     position: relative;
     right: auto;
     bottom: auto;
