@@ -1,6 +1,9 @@
+'use strict';
+
 import styles from './index.module.css';
 import { Skill } from '@/app/_constants/skills';
 import Image from 'next/image';
+import { Tooltip } from '@nextui-org/react';
 
 type Props = {
   skills?: Skill[];
@@ -16,14 +19,20 @@ export default function SkillList({ skills }: Props) {
   return (
     <ul>
       {skills.map((skill, key) => (
-        <Image
-          className={styles.devicon}
-          key={key}
-          src={skill.image}
-          alt={skill.name}
-          width={40}
-          height={40}
-        />
+        <Tooltip
+          placement="bottom"
+          content={skill.name}
+          style={{ backgroundColor: '#f5f5f5', borderRadius: '10px', padding: '0 10px' }}
+        >
+          <Image
+            className={styles.devicon}
+            key={key}
+            src={skill.image}
+            alt={skill.name}
+            width={40}
+            height={40}
+          />
+        </Tooltip>
       ))}
     </ul>
   );
