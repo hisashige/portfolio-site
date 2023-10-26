@@ -66,6 +66,23 @@ const backend: Skill[] = [
 
 const infra: Skill[] = [
   { name: 'AWS', image: '/skills/aws.svg' },
+  { name: 'EC2', image: 'https://icon.icepanel.io/AWS/svg/Compute/EC2.svg' },
+  { name: 'Lambda', image: 'https://icon.icepanel.io/AWS/svg/Compute/Lambda.svg' },
+  { name: 'Fargate', image: 'https://icon.icepanel.io/AWS/svg/Compute/Fargate.svg' },
+  { name: 'S3', image: 'https://icon.icepanel.io/AWS/svg/Storage/Simple-Storage-Service.svg' },
+  {
+    name: 'CloudFront',
+    image: 'https://icon.icepanel.io/AWS/svg/Networking-Content-Delivery/CloudFront.svg',
+  },
+  { name: 'RDS', image: 'https://icon.icepanel.io/AWS/svg/Database/RDS.svg' },
+  {
+    name: 'CloudWatch',
+    image: 'https://icon.icepanel.io/AWS/svg/Management-Governance/CloudWatch.svg',
+  },
+  {
+    name: 'CloudFormation',
+    image: 'https://icon.icepanel.io/AWS/svg/Management-Governance/CloudFormation.svg',
+  },
   {
     name: 'Azure',
     image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original-wordmark.svg',
