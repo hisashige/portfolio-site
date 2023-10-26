@@ -20,7 +20,7 @@ export default function Footer() {
           </li>
         </ul>
       </nav>
-      <p>© SIMPLE. All Rights Reserved 2023</p>
+      <p>© Hisashige Takahashi. All Rights Reserved</p>
     </footer>
   );
 }
