@@ -5,6 +5,7 @@ import Footer from '@/app/_components/Footer';
 import Header from '@/app/_components/Header';
 import './globals.css';
 import styles from './layout.module.css';
+import { Providers } from './provider';
 
 export const revalidate = 60;
 
@@ -35,7 +36,7 @@ type Props = {
 
 export default async function RootLayout({ children }: Props) {
   return (
-    <html lang="ja">
+    <html lang="ja" className="dark">
       <Script
         type="text/javascript"
         id="hs-script-loader"
@@ -44,9 +45,11 @@ export default async function RootLayout({ children }: Props) {
         src={`//js.hs-scripts.com/${process.env.HUBSPOT_PORTAL_ID}.js`}
       ></Script>
       <body className={styles.body}>
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        <Providers>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </Providers>
       </body>
     </html>
   );
