@@ -1,12 +1,14 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { getNewsList } from '@/app/_libs/microcms';
 import { TOP_NEWS_LIMIT } from '@/app/_constants';
 import NewsList from '@/app/_components/NewsList';
 import styles from './page.module.css';
 import ButtonLink from '@/app/_components/ButtonLink';
 import SkillList from './_components/SkillList';
-import { skills } from './_constants/skills';
+import { SKILLS } from './_constants/skills';
 import SkillTextList from './_components/SkillTextList';
+import { LINKS } from './_constants/links';
 
 export const revalidate = 60;
 
@@ -16,7 +18,7 @@ export default async function Page() {
   });
   return (
     <>
-      <section className={styles.top}>
+      <section id="top" className={styles.top}>
         <div>
           <h1 className={styles.title}>Hisashige Takahashi</h1>
           <p className={styles.description}>
@@ -25,16 +27,20 @@ export default async function Page() {
             And your partner.
           </p>
         </div>
-        <Image
-          className={styles.bgimg}
-          src="/img-mv.jpg"
-          alt=""
-          width={3600}
-          height={1200}
-          priority
-        />
       </section>
-      <section className={styles.section}>
+      <section className={styles.links}>
+        <h2 className={styles.linksTitle}>Links</h2>
+        <div className={styles.linkContents}>
+          {LINKS.map((link, key) => {
+            return (
+              <Link href={link.url} key={key} rel="noopener noreferrer" target="_blank">
+                <Image src={link.image} alt={link.name} width={50} height={50} />
+              </Link>
+            );
+          })}
+        </div>
+      </section>
+      <section id="philosophy" className={styles.section}>
         <div className={styles.horizontal}>
           <div>
             <h2 className={styles.sectionTitleEn}>Philosophy</h2>
@@ -69,11 +75,11 @@ export default async function Page() {
           />
         </div>
       </section>
-      <div className={styles.aboutus}>
-        <section className={styles.section}>
+      <div className={styles.career}>
+        <section id="career" className={styles.section}>
           <div className={styles.horizontal}>
             <Image
-              className={styles.aboutusImg}
+              className={styles.careerImg}
               src="/img-aboutus.jpg"
               alt=""
               width={6000}
@@ -118,7 +124,7 @@ export default async function Page() {
           </div>
         </section>
       </div>
-      <section className={styles.section}>
+      <section id="skills" className={styles.section}>
         <div className={styles.horizontal}>
           <div style={{ textAlign: 'center' }}>
             <h2 className={styles.sectionTitleEn}>Skills</h2>
@@ -127,13 +133,13 @@ export default async function Page() {
             </p>
             <div className={styles.skills}>
               <h2 className={styles.skillsTitle}>Frontend</h2>
-              <SkillList skills={skills.frontend} />
+              <SkillList skills={SKILLS.frontend} />
               <h2 className={styles.skillsTitle}>Backend</h2>
-              <SkillList skills={skills.backend} />
+              <SkillList skills={SKILLS.backend} />
               <h2 className={styles.skillsTitle}>Infra</h2>
-              <SkillList skills={skills.infra} />
+              <SkillList skills={SKILLS.infra} />
               <h2 className={styles.skillsTitle}>Management</h2>
-              <SkillTextList skillTexts={skills.management} />
+              <SkillTextList skillTexts={SKILLS.management} />
             </div>
             <div>
               <h2 className={styles.skillsTitle}>強み</h2>
