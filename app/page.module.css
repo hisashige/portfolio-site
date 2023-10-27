@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-image: linear-gradient(90deg, rgba(65, 164, 253, 1), rgba(14, 244, 255, 1));
   color: #fff;
   overflow: hidden;
   padding: 200px 0;
@@ -14,10 +14,36 @@
   font-weight: bold;
   text-align: center;
   margin-bottom: 1rem;
+  animation: slideIn 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(180px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+  }
+  40%,
+  100% {
+    opacity: 1;
+  }
 }
 
 .description {
   text-align: center;
+  opacity: 0;
+  animation: fadeIn 0.7s cubic-bezier(0.33, 1, 0.68, 1) 1s forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .bgimg {
@@ -32,6 +58,24 @@
   align-items: center;
   justify-content: center;
   z-index: -1;
+}
+
+.links {
+  position: relative;
+  background-color: #fff;
+  width: 840px;
+  margin: -40px auto 0;
+  padding: 24px 40px;
+  border-radius: var(--border-radius);
+}
+
+.linksTitle {
+  font-size: 1.5rem;
+}
+
+.linkContents {
+  display: flex;
+  justify-content: space-around;
 }
 
 .skills {
@@ -119,11 +163,11 @@
   color: var(--color-text-unpainted);
 }
 
-.aboutus {
+.career {
   background-color: #fff;
 }
 
-.aboutusImg {
+.careerImg {
   width: 100%;
   height: auto;
   margin-left: -60%;
@@ -152,6 +196,10 @@
 }
 
 @media (max-width: 1000px) {
+  .links {
+    width: calc(100% - 160px);
+  }
+
   .skills {
     width: calc(100% - 160px);
   }
@@ -187,6 +235,11 @@
     align-items: center;
     justify-content: center;
     z-index: -1;
+  }
+
+  .links {
+    width: calc(100% - 32px);
+    padding: 16px 24px;
   }
 
   .skills {
@@ -242,7 +295,7 @@
     height: auto;
   }
 
-  .aboutusImg {
+  .careerImg {
     width: 100%;
     height: auto;
     margin-left: 0;

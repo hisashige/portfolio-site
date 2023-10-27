@@ -3,7 +3,7 @@ export type Skill = {
   image: string;
 };
 
-const frontend: Skill[] = [
+const FRONTEND: Skill[] = [
   {
     name: 'HTML',
     image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg',
@@ -39,7 +39,7 @@ const frontend: Skill[] = [
   },
 ];
 
-const backend: Skill[] = [
+const BACKEND: Skill[] = [
   {
     name: 'Node.js',
     image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg',
@@ -64,7 +64,7 @@ const backend: Skill[] = [
   },
 ];
 
-const infra: Skill[] = [
+const INFRA: Skill[] = [
   { name: 'AWS', image: '/skills/aws.svg' },
   { name: 'EC2', image: 'https://icon.icepanel.io/AWS/svg/Compute/EC2.svg' },
   { name: 'Lambda', image: 'https://icon.icepanel.io/AWS/svg/Compute/Lambda.svg' },
@@ -102,11 +102,11 @@ const infra: Skill[] = [
   },
 ];
 
-const management = ['プロジェクトマネージャー', 'スクラムマスター', 'エンジニアリングマネージャー'];
+const MANAGEMENT = ['プロジェクトマネージャー', 'スクラムマスター', 'エンジニアリングマネージャー'];
 
-export const skills = {
-  frontend,
-  backend,
-  infra,
-  management,
+export const SKILLS = {
+  frontend: FRONTEND,
+  backend: BACKEND,
+  infra: INFRA,
+  management: MANAGEMENT,
 };
