@@ -36,7 +36,7 @@ type Props = {
 
 export default async function RootLayout({ children }: Props) {
   return (
-    <html lang="ja" className="dark">
+    <html lang="ja" className="light">
       <Script
         type="text/javascript"
         id="hs-script-loader"

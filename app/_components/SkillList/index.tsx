@@ -45,13 +45,13 @@ export default function SkillList({ skills }: Props) {
   }, [isMobile]);
 
   return (
-    <ul>
+    <ul className={styles.skillsContainer}>
       {skills.map((skill, key) => (
         <Tooltip
+          key={key}
           placement="bottom"
           content={skill.name}
           isOpen={isMobile ? opneTooltipKey === key : undefined}
-          style={{ backgroundColor: '#f5f5f5', borderRadius: '10px', padding: '0 10px' }}
         >
           <Image
             className={styles.devicon}
