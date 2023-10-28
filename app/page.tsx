@@ -4,11 +4,11 @@ import { getNewsList } from '@/app/_libs/microcms';
 import { TOP_NEWS_LIMIT } from '@/app/_constants';
 import NewsList from '@/app/_components/NewsList';
 import styles from './page.module.css';
-import ButtonLink from '@/app/_components/ButtonLink';
 import SkillList from './_components/SkillList';
 import { SKILLS } from './_constants/skills';
 import SkillTextList from './_components/SkillTextList';
 import { LINKS } from './_constants/links';
+import { Avatar } from '@nextui-org/react';
 
 export const revalidate = 60;
 
@@ -19,6 +19,7 @@ export default async function Page() {
   return (
     <>
       <section id="top" className={styles.top}>
+        <Avatar className={styles.avatar} src="/pc-cat.png" alt="Logo" />
         <div>
           <h1 className={styles.title}>Hisashige Takahashi</h1>
           <p className={styles.description}>
@@ -141,7 +142,7 @@ export default async function Page() {
               <h2 className={styles.skillsTitle}>Management</h2>
               <SkillTextList skillTexts={SKILLS.management} />
             </div>
-            <div>
+            <div className={styles.skillsSentence}>
               <h2 className={styles.skillsTitle}>強み</h2>
               <p className={styles.sentence}>
                 要件定義〜設計〜開発〜運用、インフラ〜フロントまでフルサイクルでご相談できるのが強みです。
@@ -164,7 +165,6 @@ export default async function Page() {
               <br />
               新しいアイデアを出し合い、成長する環境で活躍したい方は、ぜひご応募ください。当社でのキャリアを築きながら、技術の最前線で力を発揮しましょう。
             </p>
-            <ButtonLink href="">採用情報へ</ButtonLink>
           </div>
           <Image
             className={styles.hiringImg}
