@@ -7,25 +7,33 @@ import './globals.css';
 import styles from './layout.module.css';
 import { Providers } from './provider';
 
-export const revalidate = 60;
+const metaData = {
+  title: 'Hisashige Takahashi',
+  description:
+    'Hisashige Takahashiのポートフォリオサイトです。フルサイクルなWebエンジニアとしてフリーランスで活動しています。',
+  ogTitle: 'Hisashige Takahashi',
+  ogDescription:
+    'Hisashige Takahashiのポートフォリオサイトです。フルサイクルなWebエンジニアとしてフリーランスで活動しています。',
+  canonical: 'https://hisashige.dev',
+};
 
 export async function generateMetadata(): Promise<Metadata> {
-  const data = await getMeta();
-  if (!data) {
-    return {};
-  }
-
   return {
     metadataBase: new URL(process.env.BASE_URL || 'http://localhost:3001'),
-    title: data.title,
-    description: data.description,
+    title: metaData.title,
+    description: metaData.description,
     openGraph: {
-      title: data.ogTitle,
-      description: data.ogDescription,
-      images: [data.ogImage?.url || ''],
+      title: metaData.ogTitle,
+      description: metaData.ogDescription,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: metaData.ogTitle,
+      description: metaData.ogDescription,
+      site: '@hisachii56',
     },
     alternates: {
-      canonical: data.canonical,
+      canonical: new URL(process.env.BASE_URL || 'http://localhost:3001'),
     },
   };
 }
