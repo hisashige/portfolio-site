@@ -1,11 +1,12 @@
 .header {
-  position: absolute;
+  position: fixed;
   padding: 16px 24px 8px;
   z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  background-image: linear-gradient(90deg, rgba(65, 164, 253, 0.7), rgba(14, 244, 255, 0.7));
 }
 
 .logoLink {

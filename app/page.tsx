@@ -46,7 +46,7 @@ export default async function Page() {
           <div>
             <h2 className={styles.sectionTitleEn}>Philosophy</h2>
             <p className={styles.sectionTitleJa}>価値観</p>
-            <p className={styles.sectionSlogan}>「デジタルで人に寄り添う」</p>
+            <p className={styles.sectionSlogan}>「技術で人に寄り添う」</p>
             <div className={styles.sectionDescription}>
               <p className={styles.sentence}>
                 昨今のシステム開発は変化が目まぐるしく、数多のサービスが生まれては消え、数多の開発技術がもてはやされては廃れていきます。
@@ -76,12 +76,12 @@ export default async function Page() {
           />
         </div>
       </section>
-      <div className={styles.career}>
+      <div className={styles.whiteArea}>
         <section id="career" className={styles.section}>
           <div className={styles.horizontal}>
             <Image
               className={styles.careerImg}
-              src="/img-aboutus.jpg"
+              src="/career.jpg"
               alt=""
               width={6000}
               height={4000}
@@ -126,55 +126,48 @@ export default async function Page() {
         </section>
       </div>
       <section id="skills" className={styles.section}>
-        <div className={styles.horizontal}>
-          <div style={{ textAlign: 'center' }}>
-            <h2 className={styles.sectionTitleEn}>Skills</h2>
-            <p className={styles.sectionTitleJa} style={{ justifyContent: 'center' }}>
-              技術スキル
-            </p>
-            <div className={styles.skills}>
-              <h2 className={styles.skillsTitle}>Frontend</h2>
-              <SkillList skills={SKILLS.frontend} />
-              <h2 className={styles.skillsTitle}>Backend</h2>
-              <SkillList skills={SKILLS.backend} />
-              <h2 className={styles.skillsTitle}>Infra</h2>
-              <SkillList skills={SKILLS.infra} />
-              <h2 className={styles.skillsTitle}>Management</h2>
-              <SkillTextList skillTexts={SKILLS.management} />
-            </div>
-            <div className={styles.skillsSentence}>
-              <h2 className={styles.skillsTitle}>強み</h2>
-              <p className={styles.sentence}>
-                要件定義〜設計〜開発〜運用、インフラ〜フロントまでフルサイクルでご相談できるのが強みです。
-              </p>
-            </div>
-            <div>
-              <h2 className={styles.skillsTitle}>業務</h2>
-              <p className={styles.sentence}>Webアプリ、スマホアプリ、LINEアプリ、技術コンサル</p>
-            </div>
+        <div style={{ textAlign: 'center' }}>
+          <h2 className={styles.sectionTitleEn}>Skills</h2>
+          <p className={styles.sectionTitleJa} style={{ justifyContent: 'center' }}>
+            技術スキル
+          </p>
+          <div className={styles.skills}>
+            <h2 className={styles.skillsTitle}>Frontend</h2>
+            <SkillList skills={SKILLS.frontend} />
+            <h2 className={styles.skillsTitle}>Backend</h2>
+            <SkillList skills={SKILLS.backend} />
+            <h2 className={styles.skillsTitle}>Infra</h2>
+            <SkillList skills={SKILLS.infra} />
+            <h2 className={styles.skillsTitle}>Management</h2>
+            <SkillTextList skillTexts={SKILLS.management} />
           </div>
-        </div>
-      </section>
-      <section className={styles.section}>
-        <div className={styles.horizontal}>
+          <div className={styles.skillsSentence}>
+            <h2 className={styles.skillsTitle}>強み</h2>
+            <p className={styles.sentence}>
+              要件定義〜設計〜開発〜運用、インフラ〜フロントまでフルサイクルでご相談できるのが強みです。
+            </p>
+          </div>
           <div>
-            <h2 className={styles.sectionTitleEn}>We are hiring</h2>
-            <p className={styles.sectionTitleJa}>採用情報</p>
-            <p className={styles.sectionDescription}>
-              当社では、チャレンジ精神を持った人材を求めています。
-              <br />
-              新しいアイデアを出し合い、成長する環境で活躍したい方は、ぜひご応募ください。当社でのキャリアを築きながら、技術の最前線で力を発揮しましょう。
-            </p>
+            <h2 className={styles.skillsTitle}>業務</h2>
+            <p className={styles.sentence}>Webアプリ、スマホアプリ、LINEアプリ、技術コンサル</p>
           </div>
-          <Image
-            className={styles.hiringImg}
-            src="/img-hiring.jpg"
-            alt=""
-            width={960}
-            height={960}
-          />
         </div>
       </section>
+      <div className={styles.whiteArea}>
+        <section id="works" className={styles.section}>
+          <div style={{ textAlign: 'center' }}>
+            <h2 className={styles.sectionTitleEn}>Works</h2>
+            <p className={styles.sectionTitleJa} style={{ justifyContent: 'center' }}>
+              作品
+            </p>
+            <p className={styles.sentence}>
+              趣味の個人制作物です。
+              <br />
+              仕事が第一だったため、個人制作はあまりしてこなかったのですが、徐々に増やしていきます…！
+            </p>
+          </div>
+        </section>
+      </div>
     </>
   );
 }

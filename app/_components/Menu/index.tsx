@@ -29,7 +29,7 @@ export default function Menu() {
             </Link>
           </li>
           <li>
-            <Link href="" onClick={close}>
+            <Link href="#works" onClick={close}>
               作品
             </Link>
           </li>
