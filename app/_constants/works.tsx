@@ -46,8 +46,14 @@ export const WORKS = [
     thumbnail: 'http://image.gihyo.co.jp/assets/images/cover/2021/642101.jpg',
     image: 'http://image.gihyo.co.jp/assets/images/cover/2021/642101.jpg',
     subtitle: '「はじめてのAIチャットボット開発」',
-    description:
-      '「Software Design 2021年1月号」より、「はじめてのAIチャットボット開発」を6ヶ月連載しました。入門者向けに、LINEやWEBで動くAIチャットボットの完成を目指す内容です。',
+    description: (
+      <>
+        <p>
+          Software Design 2021年1月号」より、「はじめてのAIチャットボット開発」を6ヶ月連載しました。
+        </p>
+        <p>入門者向けに、LINEやWEBで動くAIチャットボットの完成を目指す内容です。 </p>
+      </>
+    ),
     techs: ['執筆', 'Dialogflow', 'LINE Messaging API', 'Vue.js'],
     link: 'https://gihyo.jp/magazine/SD/archive/2021/202101',
   },
@@ -60,4 +66,4 @@ export const WORKS = [
     techs: [],
     link: null,
   },
-] as const;
+];
