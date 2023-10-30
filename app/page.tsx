@@ -56,7 +56,7 @@ export default async function Page() {
                 がエンジニアとして大切だと考えています。
               </p>
               <p className={styles.sentence}>
-                友人のように気軽に心地よく相談でき、一緒に何かを作っていくことが楽しくなるような、
+                友人のように気軽に、心地よく相談でき、一緒に何かを作っていくことが楽しくなるような、
                 頼れるパートナーでありたい。 そんな思いで、日々の業務に取り組んでいます。
               </p>
               <p className={styles.sentence}>
