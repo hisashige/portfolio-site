@@ -2,9 +2,6 @@
 
 ![](public/works/main/portfolio.png)
 
-microCMS 公式のシンプルなコーポレートサイトのテンプレートです。
-サイト内のお問い合わせ送信先として CRM である [HubSpot](https://www.hubspot.jp/) を利用しています。
-
 ## 動作環境
 
 Node.js 18 以上
