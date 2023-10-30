@@ -21,7 +21,7 @@ export default async function Page() {
         <div>
           <h1 className={styles.title}>Hisashige Takahashi</h1>
           <p className={styles.description}>
-            I'm a Full Cycle Software Engineer.
+            I&apos;m a Full Cycle Software Engineer.
             <br />
             And your partner.
           </p>

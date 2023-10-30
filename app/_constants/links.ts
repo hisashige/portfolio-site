@@ -1,5 +1,5 @@
 export const LINKS = [
-  { name: 'X', url: 'https://twitter.com/hisachii56', image: '/links/X.svg' },
+  { name: 'X', url: 'https://twitter.com/hisachii56', image: '/links/x.svg' },
 
   {
     name: 'GitHub',
