@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
 import Script from 'next/script';
-import { getMeta } from '@/app/_libs/microcms';
 import Footer from '@/app/_components/Footer';
 import Header from '@/app/_components/Header';
 import './globals.css';

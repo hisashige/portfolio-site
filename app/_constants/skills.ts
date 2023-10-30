@@ -109,4 +109,4 @@ export const SKILLS = {
   backend: BACKEND,
   infra: INFRA,
   management: MANAGEMENT,
-};
+} as const;

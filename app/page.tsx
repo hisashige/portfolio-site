@@ -2,15 +2,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { getNewsList } from '@/app/_libs/microcms';
 import { TOP_NEWS_LIMIT } from '@/app/_constants';
-import NewsList from '@/app/_components/NewsList';
 import styles from './page.module.css';
 import SkillList from './_components/SkillList';
 import { SKILLS } from './_constants/skills';
 import SkillTextList from './_components/SkillTextList';
 import { LINKS } from './_constants/links';
 import { Avatar } from '@nextui-org/react';
-
-export const revalidate = 60;
+import WorkSlider from './_components/WorkSlider';
 
 export default async function Page() {
   const data = await getNewsList({
@@ -112,13 +110,13 @@ export default async function Page() {
                   業務システムの設計・開発でキャリアをスタートし、もう少し開発全体を見通せる仕事や、新しい技術を扱いたいという思いから、Webエンジニアに転身しました。
                 </p>
                 <p className={styles.sentence}>
-                  その後プロジェクトマネージャーとして、開発チームの管理や、お客様との折衝を行うなど、マネジメント業務を主にしつつ、自ら手を動かす開発も続けていました。
+                  その後プロジェクトマネージャーとして、開発チームの管理や、お客様との折衝を行うなど、マネジメント業務を主にしつつ、自ら手を動かす開発も続けました。
                 </p>
                 <p className={styles.sentence}>
                   新しい技術の利用と新規顧客の開拓を目的に、新規に立ち上げたチームでは、採用や教育なども行い、エンジニアリングマネージャーとして10名ほどのチームを運営する経験も積みました。
                 </p>
                 <p className={styles.sentence}>
-                  現在はフリーランスエンジニアとして、スタートアップ企業のアプリ開発の運用・改善チームのリードや、CTO室で技術基盤開発の支援を行っています。
+                  現在はフリーランスエンジニアとして、スタートアップ企業のアプリ開発の運用・改善を行うチームのリードや、CTO室で技術基盤開発の支援を行っています。
                 </p>
               </div>
             </div>
@@ -163,8 +161,9 @@ export default async function Page() {
             <p className={styles.sentence}>
               趣味の個人制作物です。
               <br />
-              仕事が第一だったため、個人制作はあまりしてこなかったのですが、徐々に増やしていきます…！
+              実務中心だったため、個人制作はあまりしてこなかったのですが、徐々に増やしていきます…！
             </p>
+            <WorkSlider />
           </div>
         </section>
       </div>
