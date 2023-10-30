@@ -12,13 +12,6 @@ type Props = {
 };
 
 export default function SkillList({ skills }: Props) {
-  if (!skills) {
-    return null;
-  }
-  if (skills.length === 0) {
-    return <p>表示する技術がありません。</p>;
-  }
-
   // モバイルの場合は、画像をクリックするとTooltipが表示されるようにする
   // PCの場合は、hoverでTooltipが表示される
   const isMobile = useIsMobile();
@@ -43,6 +36,13 @@ export default function SkillList({ skills }: Props) {
       };
     }
   }, [isMobile]);
+
+  if (!skills) {
+    return null;
+  }
+  if (skills.length === 0) {
+    return <p>表示する技術がありません。</p>;
+  }
 
   return (
     <ul className={styles.skillsContainer}>
