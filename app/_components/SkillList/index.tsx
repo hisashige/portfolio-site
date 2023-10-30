@@ -21,7 +21,7 @@ export default function SkillList({ skills }: Props) {
     e.stopPropagation();
     setOpenToolkitKey(key);
   };
-  const handleClick = (event: Event) => {
+  const closeTooltip = (event: Event) => {
     if (imageRef.current && !imageRef.current.contains(event.target as Node)) {
       // クリックされた要素がimage要素ではない場合
       setOpenToolkitKey(null);
@@ -29,10 +29,12 @@ export default function SkillList({ skills }: Props) {
   };
   useEffect(() => {
     if (isMobile) {
-      document.addEventListener('click', handleClick);
+      document.addEventListener('click', closeTooltip);
+      document.addEventListener('touchstart', closeTooltip);
 
       return () => {
-        document.removeEventListener('click', handleClick);
+        document.removeEventListener('click', closeTooltip);
+        document.removeEventListener('touchstart', closeTooltip);
       };
     }
   }, [isMobile]);
