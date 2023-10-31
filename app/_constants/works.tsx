@@ -7,8 +7,8 @@ export const WORKS = [
     image: '/works/main/portfolio.png',
     subtitle: 'このサイト',
     description:
-      'Next.js + TypeScript + Tailwind CSS + NextUI + Vercel、なポートフォリオサイトです。',
-    techs: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'NextUI', 'Vercel'],
+      'Next.js + TypeScript + Tailwind CSS + NextUI + microCMS + Vercel、なポートフォリオサイトです。',
+    techs: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'NextUI', 'microCMS', 'Vercel'],
     link: null,
   },
   {
@@ -20,7 +20,7 @@ export const WORKS = [
       <>
         <p>
           Pomodoro
-          Adventure(_ポモドーロアドベンチャー)はあなたの努力を視覚化するポモドーロツールです。
+          Adventure(ポモドーロアドベンチャー)はあなたの努力を視覚化するポモドーロツールです。
         </p>
         <p>
           BGMやビジュアルによるモチベーションの向上、ログ・グラフによる努力の可視化でサポートします。
