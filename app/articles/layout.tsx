@@ -2,7 +2,7 @@ import Hero from '@/app/_components/Hero';
 import Sheet from '@/app/_components/Sheet';
 
 export const metadata = {
-  title: '記事｜Hisashige Takahashi',
+  title: '記事｜ hisachii',
 };
 
 type Props = {
