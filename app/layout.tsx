@@ -7,6 +7,8 @@ import './globals.css';
 import styles from './layout.module.css';
 import { Providers } from './provider';
 
+export const revalidate = 60;
+
 export async function generateMetadata(): Promise<Metadata> {
   const data = await getMeta();
   if (!data) {
@@ -26,7 +28,7 @@ export async function generateMetadata(): Promise<Metadata> {
       card: 'summary_large_image',
       title: data.twitterTitle,
       description: data.tiwtterDescription,
-      site: data.twitterSite,
+      site: '@hisachii56',
     },
     alternates: {
       canonical: data.canonical,

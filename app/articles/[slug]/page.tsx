@@ -28,6 +28,12 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
       description: data.description,
       images: [data?.thumbnail?.url || ''],
     },
+    twitter: {
+      card: 'summary_large_image',
+      title: data.title,
+      description: data.description,
+      site: '@hisachii56',
+    },
   };
 }
 

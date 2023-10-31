@@ -2,6 +2,8 @@ import { getArticleList } from '@/app/_libs/microcms';
 import { ARTICLE_LIST_LIMIT } from '@/app/_constants';
 import Pagination from '@/app/_components/Pagination';
 import ArticleList from '@/app/_components/ArticleList';
+import ButtonLink from '@/app/_components/ButtonLink';
+import styles from './page.module.css';
 
 type Props = {
   params: {
@@ -21,6 +23,9 @@ export default async function Page({ params }: Props) {
     <>
       <ArticleList articles={data.contents} />
       <Pagination totalCount={data.totalCount} current={current} basePath="/articles" />
+      <div className={styles.footer}>
+        <ButtonLink href="/">トップページへ</ButtonLink>
+      </div>
     </>
   );
 }
