@@ -100,6 +100,10 @@ const INFRA: Skill[] = [
     name: 'MySQL',
     image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg',
   },
+  {
+    name: 'mongoDB',
+    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg',
+  },
 ];
 
 const MANAGEMENT = ['プロジェクトマネージャー', 'スクラムマスター', 'エンジニアリングマネージャー'];

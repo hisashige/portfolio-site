@@ -8,15 +8,20 @@ type Props = {
   params: {
     slug: string;
   };
+  searchParams: {
+    dk: string;
+  };
 };
 
-export const revalidate = 60;
+export const revalidate = 0;
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const data = await getArticleDetail(params.slug);
+export async function generateMetadata({ params, searchParams }: Props): Promise<Metadata> {
+  const data = await getArticleDetail(params.slug, {
+    draftKey: searchParams.dk,
+  });
 
   return {
-    title: data.title,
+    title: `preview | ${data.title}`,
     description: data.description,
     openGraph: {
       title: data.title,
@@ -32,8 +37,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default async function Page({ params }: Props) {
-  const data = await getArticleDetail(params.slug);
+export default async function Page({ params, searchParams }: Props) {
+  const data = await getArticleDetail(params.slug, {
+    draftKey: searchParams.dk,
+  });
   return (
     <>
       <Article data={data} />
