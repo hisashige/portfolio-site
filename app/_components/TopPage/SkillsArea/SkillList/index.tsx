@@ -48,25 +48,40 @@ export default function SkillList({ skills }: Props) {
 
   return (
     <ul className={styles.skillsContainer}>
-      {skills.map((skill, key) => (
-        <Tooltip
-          key={key}
-          placement="bottom"
-          content={skill.name}
-          isOpen={isMobile ? opneTooltipKey === key : undefined}
-        >
-          <Image
-            className={styles.devicon}
-            key={key}
-            src={skill.image}
-            alt={skill.name}
-            width={40}
-            height={40}
-            onClick={isMobile ? handleImageClick(key) : undefined}
-            ref={isMobile ? imageRef : null}
-          />
-        </Tooltip>
-      ))}
+      {skills.map((skill, key) => {
+        if (isMobile) {
+          return (
+            <Tooltip
+              key={key}
+              placement="bottom"
+              content={skill.name}
+              isOpen={opneTooltipKey === key}
+            >
+              <Image
+                className={styles.devicon}
+                key={key}
+                src={skill.image}
+                alt={skill.name}
+                width={40}
+                height={40}
+                onClick={handleImageClick(key)}
+                ref={imageRef}
+              />
+            </Tooltip>
+          );
+        } else {
+          <Tooltip key={key} placement="bottom" content={skill.name}>
+            <Image
+              className={styles.devicon}
+              key={key}
+              src={skill.image}
+              alt={skill.name}
+              width={40}
+              height={40}
+            />
+          </Tooltip>;
+        }
+      })}
     </ul>
   );
 }
