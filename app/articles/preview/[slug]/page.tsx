@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { getArticleDetail } from '@/app/_libs/microcms';
 import Article from '@/app/_components/Article';
-import styles from './page.module.css';
+import styles from '../../page.module.css';
 import ButtonLink from '@/app/_components/ButtonLink';
 
 type Props = {
@@ -21,7 +21,7 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
   });
 
   return {
-    title: `preview | ${data.title}`,
+    title: `${data.title} | preview`,
     description: data.description,
     openGraph: {
       title: data.title,

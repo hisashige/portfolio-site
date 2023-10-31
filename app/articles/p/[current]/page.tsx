@@ -3,7 +3,7 @@ import { ARTICLE_LIST_LIMIT } from '@/app/_constants';
 import Pagination from '@/app/_components/Pagination';
 import ArticleList from '@/app/_components/ArticleList';
 import ButtonLink from '@/app/_components/ButtonLink';
-import styles from './page.module.css';
+import styles from '../../page.module.css';
 
 type Props = {
   params: {
