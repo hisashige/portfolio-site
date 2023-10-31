@@ -7,6 +7,7 @@ export default function TopArea() {
       <Avatar className={styles.avatar} src="/pc-cat.png" alt="Logo" />
       <div>
         <h1 className={styles.title}>Hisashige Takahashi</h1>
+        <p className={styles.aka}>a.k.a ひさちー</p>
         <p className={styles.description}>
           I&apos;m a Full Cycle Software Engineer.
           <br />

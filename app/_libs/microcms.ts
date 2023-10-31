@@ -13,8 +13,8 @@ export type Category = {
 } & MicroCMSContentId &
   MicroCMSDate;
 
-// ニュースの型定義
-export type News = {
+// 記事の型定義
+export type Article = {
   title: string;
   description: string;
   content: string;
@@ -35,7 +35,7 @@ export type Meta = {
   twitterSite?: string;
 };
 
-export type Article = News & MicroCMSContentId & MicroCMSDate;
+export type ArticleContent = Article & MicroCMSContentId & MicroCMSDate;
 
 if (!process.env.MICROCMS_SERVICE_DOMAIN) {
   throw new Error('MICROCMS_SERVICE_DOMAIN is required');
@@ -51,22 +51,22 @@ export const client = createClient({
   apiKey: process.env.MICROCMS_API_KEY,
 });
 
-// ニュース一覧を取得
-export const getNewsList = async (queries?: MicroCMSQueries) => {
+// 記事一覧を取得
+export const getArticleList = async (queries?: MicroCMSQueries) => {
   const listData = await client
-    .getList<News>({
-      endpoint: 'news',
+    .getList<Article>({
+      endpoint: 'article',
       queries,
     })
     .catch(notFound);
   return listData;
 };
 
-// ニュースの詳細を取得
-export const getNewsDetail = async (contentId: string, queries?: MicroCMSQueries) => {
+// 記事の詳細を取得
+export const getArticleDetail = async (contentId: string, queries?: MicroCMSQueries) => {
   const detailData = await client
-    .getListDetail<News>({
-      endpoint: 'news',
+    .getListDetail<Article>({
+      endpoint: 'article',
       contentId,
       queries,
     })

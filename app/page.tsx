@@ -1,21 +1,26 @@
-import { getNewsList } from '@/app/_libs/microcms';
-import { TOP_NEWS_LIMIT } from '@/app/_constants';
+import TopArea from '@/app/_components/TopPage/TopArea';
+import LinksArea from '@/app/_components/TopPage/LinksArea';
+import ArticlesArea from '@/app/_components/TopPage/ArticlesArea';
+import PhilosophyArea from '@/app/_components/TopPage/PhilosophyArea';
+import CareerArea from '@/app/_components/TopPage/CareerArea';
+import SkillsArea from '@/app/_components/TopPage/SkillsArea';
+import WorksArea from '@/app/_components/TopPage/WorksArea';
 
-import TopArea from './_components/TopPage/TopArea';
-import LinksArea from './_components/TopPage/LinksArea';
-import PhilosophyArea from './_components/TopPage/PhilosophyArea';
-import CareerArea from './_components/TopPage/CareerArea';
-import SkillsArea from './_components/TopPage/SkillsArea';
-import WorksArea from './_components/TopPage/WorksArea';
+import { TOP_ARTICLE_LIMIT } from '@/app/_constants';
+import { getArticleList } from '@/app/_libs/microcms';
+
+export const revalidate = 60;
 
 export default async function Page() {
-  const data = await getNewsList({
-    limit: TOP_NEWS_LIMIT,
+  const articleData = await getArticleList({
+    limit: TOP_ARTICLE_LIMIT,
   });
+
   return (
     <>
       <TopArea />
       <LinksArea />
+      <ArticlesArea data={articleData} />
       <PhilosophyArea />
       <CareerArea />
       <SkillsArea />
