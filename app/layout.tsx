@@ -43,13 +43,13 @@ type Props = {
 export default async function RootLayout({ children }: Props) {
   return (
     <html lang="ja" className="light">
-      <Script
+      {/* <Script
         type="text/javascript"
         id="hs-script-loader"
         async
         defer
         src={`//js.hs-scripts.com/${process.env.HUBSPOT_PORTAL_ID}.js`}
-      ></Script>
+      ></Script> */}
       <body className={styles.body}>
         <Providers>
           <Header />
