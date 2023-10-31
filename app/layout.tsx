@@ -27,7 +27,7 @@ export async function generateMetadata(): Promise<Metadata> {
     twitter: {
       card: 'summary_large_image',
       title: data.twitterTitle,
-      description: data.tiwtterDescription,
+      description: data.twitterDescription,
       images: [data.twitterImage?.url || ''],
       site: '@hisachii56',
     },

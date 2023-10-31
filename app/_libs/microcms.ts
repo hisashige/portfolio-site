@@ -31,7 +31,7 @@ export type Meta = {
   ogImage?: MicroCMSImage;
   canonical?: string;
   twitterTitle?: string;
-  tiwtterDescription?: string;
+  twitterDescription?: string;
   twitterImage?: MicroCMSImage;
 };
 
