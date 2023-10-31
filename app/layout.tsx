@@ -1,38 +1,35 @@
 import { Metadata } from 'next';
 import Script from 'next/script';
+import { getMeta } from '@/app/_libs/microcms';
 import Footer from '@/app/_components/Footer';
 import Header from '@/app/_components/Header';
 import './globals.css';
 import styles from './layout.module.css';
 import { Providers } from './provider';
 
-const metaData = {
-  title: 'Hisashige Takahashi',
-  description:
-    'Hisashige Takahashiのポートフォリオサイトです。フルサイクルなWebエンジニアとしてフリーランスで活動しています。',
-  ogTitle: 'Hisashige Takahashi',
-  ogDescription:
-    'Hisashige Takahashiのポートフォリオサイトです。フルサイクルなWebエンジニアとしてフリーランスで活動しています。',
-  canonical: 'https://hisashige.dev',
-};
-
 export async function generateMetadata(): Promise<Metadata> {
+  const data = await getMeta();
+  if (!data) {
+    return {};
+  }
+
   return {
     metadataBase: new URL(process.env.BASE_URL || 'http://localhost:3001'),
-    title: metaData.title,
-    description: metaData.description,
+    title: data.title,
+    description: data.description,
     openGraph: {
-      title: metaData.ogTitle,
-      description: metaData.ogDescription,
+      title: data.ogTitle,
+      description: data.ogDescription,
+      images: [data.ogImage?.url || ''],
     },
     twitter: {
       card: 'summary_large_image',
-      title: metaData.ogTitle,
-      description: metaData.ogDescription,
-      site: '@hisachii56',
+      title: data.twitterTitle,
+      description: data.tiwtterDescription,
+      site: data.twitterSite,
     },
     alternates: {
-      canonical: new URL(process.env.BASE_URL || 'http://localhost:3001'),
+      canonical: data.canonical,
     },
   };
 }

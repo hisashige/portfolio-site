@@ -22,22 +22,6 @@ export type News = {
   category: Category;
 };
 
-// メンバーの型定義
-export type Member = {
-  name: string;
-  position: string;
-  profile: string;
-  image?: MicroCMSImage;
-};
-
-// 事業内容の型定義
-export type Business = {
-  logo?: MicroCMSImage;
-  description: string;
-  image?: MicroCMSImage;
-  link: string;
-};
-
 // メタ情報の型定義
 export type Meta = {
   title?: string;
@@ -46,6 +30,9 @@ export type Meta = {
   ogDescription?: string;
   ogImage?: MicroCMSImage;
   canonical?: string;
+  twitterTitle?: string;
+  tiwtterDescription?: string;
+  twitterSite?: string;
 };
 
 export type Article = News & MicroCMSContentId & MicroCMSDate;
@@ -111,28 +98,6 @@ export const getCategoryDetail = async (contentId: string, queries?: MicroCMSQue
     .catch(notFound);
 
   return detailData;
-};
-
-// メンバー一覧を取得
-export const getMembersList = async (queries?: MicroCMSQueries) => {
-  const listData = await client
-    .getList<Member>({
-      endpoint: 'members',
-      queries,
-    })
-    .catch(notFound);
-  return listData;
-};
-
-// 事業内容一覧を取得
-export const getBusinessList = async (queries?: MicroCMSQueries) => {
-  const listData = await client
-    .getList<Business>({
-      endpoint: 'business',
-      queries,
-    })
-    .catch(notFound);
-  return listData;
 };
 
 // メタ情報を取得
