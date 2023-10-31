@@ -70,16 +70,18 @@ export default function SkillList({ skills }: Props) {
             </Tooltip>
           );
         } else {
-          <Tooltip key={key} placement="bottom" content={skill.name}>
-            <Image
-              className={styles.devicon}
-              key={key}
-              src={skill.image}
-              alt={skill.name}
-              width={40}
-              height={40}
-            />
-          </Tooltip>;
+          return (
+            <Tooltip key={key} placement="bottom" content={skill.name}>
+              <Image
+                className={styles.devicon}
+                key={key}
+                src={skill.image}
+                alt={skill.name}
+                width={40}
+                height={40}
+              />
+            </Tooltip>
+          );
         }
       })}
     </ul>
