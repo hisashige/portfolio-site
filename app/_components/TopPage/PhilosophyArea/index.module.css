@@ -1,0 +1,12 @@
+.philosopyImg {
+  width: 400px;
+  height: auto;
+  border-radius: var(--border-radius);
+}
+
+@media (max-width: 640px) {
+  .philosopyImg {
+    width: 100%;
+    height: auto;
+  }
+}

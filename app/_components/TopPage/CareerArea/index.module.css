@@ -1,0 +1,29 @@
+.careerImg {
+  width: 100%;
+  height: auto;
+  margin-left: -60%;
+  border-radius: var(--border-radius);
+}
+
+.career {
+  display: flex;
+  border-bottom: 1px solid var(--color-border);
+  padding: 10px 0;
+}
+
+.careerDay {
+  width: 100px;
+  font-weight: bold;
+}
+
+.careerDescription {
+  flex: 1;
+}
+
+@media (max-width: 640px) {
+  .careerImg {
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+  }
+}

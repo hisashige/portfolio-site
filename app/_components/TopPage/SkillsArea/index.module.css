@@ -1,0 +1,42 @@
+.skills {
+  position: relative;
+  background-color: #fff;
+  width: 840px;
+  margin: -20px auto 20px;
+  padding: 24px 40px;
+  border-radius: var(--border-radius);
+}
+
+.skillsTitle {
+  font-size: 1.5rem;
+}
+
+.skillsLink {
+  position: absolute;
+  right: -40px;
+  bottom: -40px;
+}
+
+.skillsSentence {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 1000px) {
+  .skills {
+    width: calc(100% - 160px);
+  }
+}
+
+@media (max-width: 640px) {
+  .skills {
+    width: calc(100% - 32px);
+    padding: 16px 24px;
+  }
+
+  .skillsLink {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    margin-top: 16px;
+  }
+}
