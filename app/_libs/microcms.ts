@@ -32,6 +32,7 @@ export type Meta = {
   canonical?: string;
   twitterTitle?: string;
   tiwtterDescription?: string;
+  twitterImage?: MicroCMSImage;
 };
 
 export type ArticleContent = Article & MicroCMSContentId & MicroCMSDate;

@@ -32,6 +32,7 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
       card: 'summary_large_image',
       title: data.title,
       description: data.description,
+      images: [data?.thumbnail?.url || ''],
       site: '@hisachii56',
     },
   };
