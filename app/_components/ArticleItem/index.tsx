@@ -1,25 +1,25 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Article } from '@/app/_libs/microcms';
+import { ArticleContent } from '@/app/_libs/microcms';
 import styles from './index.module.css';
 import PublishedDate from '../Date';
 import Category from '../Category';
 
 type Props = {
-  news: Article;
+  article: ArticleContent;
 };
 
-export default function NewsListItem({ news }: Props) {
+export default function ArticleItem({ article }: Props) {
   return (
     <li className={styles.list}>
-      <Link href={`/news/${news.id}`} className={styles.link}>
-        {news.thumbnail ? (
+      <Link href={`/articles/${article.id}`} className={styles.link}>
+        {article.thumbnail ? (
           <Image
-            src={news.thumbnail?.url}
+            src={article.thumbnail?.url}
             alt=""
             className={styles.image}
-            width={news.thumbnail?.width}
-            height={news.thumbnail?.height}
+            width={article.thumbnail?.width}
+            height={article.thumbnail?.height}
           />
         ) : (
           <Image
@@ -31,10 +31,10 @@ export default function NewsListItem({ news }: Props) {
           />
         )}
         <dl className={styles.content}>
-          <dt className={styles.title}>{news.title}</dt>
+          <dt className={styles.title}>{article.title}</dt>
           <dd className={styles.meta}>
-            <Category category={news.category} />
-            <PublishedDate date={news.publishedAt || news.createdAt} />
+            <Category category={article.category} />
+            <PublishedDate date={article.publishedAt || article.createdAt} />
           </dd>
         </dl>
       </Link>

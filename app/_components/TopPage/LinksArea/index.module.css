@@ -1,0 +1,30 @@
+.links {
+  position: relative;
+  background-color: #fff;
+  width: 840px;
+  margin: -40px auto 0;
+  padding: 24px 40px;
+  border-radius: var(--border-radius);
+}
+
+.linksTitle {
+  font-size: 1.5rem;
+}
+
+.linkContents {
+  display: flex;
+  justify-content: space-around;
+}
+
+@media (max-width: 1000px) {
+  .links {
+    width: calc(100% - 160px);
+  }
+}
+
+@media (max-width: 640px) {
+  .links {
+    width: calc(100% - 32px);
+    padding: 16px 24px;
+  }
+}
