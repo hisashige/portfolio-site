@@ -45,8 +45,8 @@ export const WORKS = [
   },
   {
     title: 'Software Design連載',
-    thumbnail: 'http://image.gihyo.co.jp/assets/images/cover/2021/642101.jpg',
-    image: 'http://image.gihyo.co.jp/assets/images/cover/2021/642101.jpg',
+    thumbnail: '/works/thumbnails/software-design.jpeg',
+    image: '/works/thumbnails/software-design.jpeg',
     subtitle: '「はじめてのAIチャットボット開発」',
     description: (
       <>
