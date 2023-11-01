@@ -3,6 +3,19 @@
   margin-bottom: 40px;
 }
 
+.xLink {
+  color: #1e90ff;
+  text-decoration: underline;
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid var(--color-border);
+  margin-top: 40px;
+  padding-top: 40px;
+}
+
 @media (max-width: 640px) {
   .text {
     text-align: left;

@@ -19,6 +19,11 @@ export default function Menu() {
             </Link>
           </li>
           <li>
+            <Link href="/articles" onClick={close}>
+              記事
+            </Link>
+          </li>
+          <li>
             <Link href="#philosophy" onClick={close}>
               価値観
             </Link>
@@ -38,11 +43,11 @@ export default function Menu() {
               作品
             </Link>
           </li>
-          {/* <li>
+          <li>
             <Link href="/contact" onClick={close}>
               お問い合わせ
             </Link>
-          </li> */}
+          </li>
         </ul>
         <button className={cx(styles.button, styles.close)} onClick={close}>
           <Image src="/close.svg" alt="閉じる" width={24} height={24} priority />
