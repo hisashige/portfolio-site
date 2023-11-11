@@ -6,6 +6,8 @@ import Header from '@/app/_components/Header';
 import './globals.css';
 import styles from './layout.module.css';
 import { Providers } from './provider';
+import { Suspense } from 'react';
+import Analytics from '@/app/_components/Analytics';
 
 export const revalidate = 60;
 
@@ -44,6 +46,7 @@ type Props = {
 export default async function RootLayout({ children }: Props) {
   return (
     <html lang="ja" className="light">
+      {/* Hub Spot */}
       <Script
         type="text/javascript"
         id="hs-script-loader"
@@ -54,6 +57,9 @@ export default async function RootLayout({ children }: Props) {
       <body className={styles.body}>
         <Providers>
           <Header />
+          <Suspense>
+            <Analytics />
+          </Suspense>
           <main>{children}</main>
           <Footer />
         </Providers>
