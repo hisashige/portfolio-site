@@ -45,8 +45,8 @@ export default function Menu() {
       <nav className={cx(styles.nav, isOpen && styles.open)}>
         <ul className={styles.items}>
           {MenuItems.map((item, key) => (
-            <li>
-              <Link href={item.href} onClick={close} key={key} className="menu-link">
+            <li key={key}>
+              <Link href={item.href} onClick={close} className="menu-link">
                 {item.name}
               </Link>
             </li>
