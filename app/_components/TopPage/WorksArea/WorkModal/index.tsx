@@ -62,7 +62,8 @@ export default function WorkModal({
               {link && (
                 <Button
                   radius="full"
-                  className="bg-gradient-to-r from-green-400 to-blue-500 text-white shadow-lg"
+                  name={title}
+                  className="bg-gradient-to-r from-green-400 to-blue-500 text-white shadow-lg go-to-work-button"
                   onPress={onPressToWorkHandler}
                 >
                   制作物へGO！

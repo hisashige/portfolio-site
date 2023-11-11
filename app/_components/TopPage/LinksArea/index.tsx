@@ -11,7 +11,7 @@ export default function LinksArea() {
         {LINKS.map((link, key) => {
           return (
             <Link href={link.url} key={key} rel="noopener noreferrer" target="_blank">
-              <Image src={link.image} alt={link.name} width={50} height={50} />
+              <Image src={link.image} alt={link.name} className="sns-link" width={50} height={50} />
             </Link>
           );
         })}

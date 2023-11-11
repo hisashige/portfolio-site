@@ -45,7 +45,8 @@ export default function SlideItem({
           {image && (
             <Button
               radius="full"
-              className="bg-gradient-to-tr from-pink-500 to-yellow-500 text-white shadow-lg"
+              name={title}
+              className="bg-gradient-to-tr from-pink-500 to-yellow-500 text-white shadow-lg work-detail-button"
               onClick={handleOpen}
             >
               詳細を見る
