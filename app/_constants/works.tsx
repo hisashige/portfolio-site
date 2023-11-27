@@ -27,7 +27,6 @@ export const WORKS = [
         </p>
         <br />
         <p>(※PCブラウザ専用)</p>
-        <p>(※バックエンド＋アカウント機能開発中。現在はブラウザにデータが保存されます。)</p>
       </>
     ),
     techs: [
@@ -38,8 +37,11 @@ export const WORKS = [
       'Chart.js',
       'NestJS',
       'GraphQL',
-      'Firebase',
       'Vercel',
+      'Firebase Authentication',
+      'Cloud Functions',
+      'GitHub Actions',
+      'Turborepo',
     ],
     link: 'https://pomodoro-adventure.vercel.app/',
   },
