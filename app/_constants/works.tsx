@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 export const WORKS = [
@@ -24,6 +25,17 @@ export const WORKS = [
         </p>
         <p>
           BGMやビジュアルによるモチベーションの向上、ログ・グラフによる努力の可視化でサポートします。
+        </p>
+        <br />
+        <p>
+          機能などの詳細は
+          <Link
+            href="https://www.hisachii.com/articles/z_i7k76jm5j"
+            target="_blank"
+            style={{ color: '#1e90ff', textDecoration: 'underline' }}
+          >
+            こちら
+          </Link>
         </p>
         <br />
         <p>(※PCブラウザ専用)</p>
